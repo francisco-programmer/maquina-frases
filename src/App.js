@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Quote from './componentes/Quote';
 import Spinner from './componentes/Spinner'
 
+
 const initiaQuote = {
   text: 'Quote',
   author: 'Author :)'
@@ -33,15 +34,21 @@ useEffect(() => {
 
 
   return (
+    
     <div className="app">
-        <img 
-  src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg"
-  alt="logo"/>
+    <div className='redes'>
+      <a href='https://www.linkedin.com/in/francisco-palencia-704a0823a/'>
+      <img src="https://cdn-icons-png.flaticon.com/512/61/61109.png" alt="linkedin" id="linkedin"/>
+      </a>
+      <a href='https://github.com/francisco-programmer'>
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25657.png" alt="github" id='github' />
+      </a>
+      </div>
+      
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" alt="logo" id="logo"/>
       <button onClick={updateQuote}>Get Another</button>
  
 { loading ? <Spinner /> : <Quote quote={quote} /> }
-
-      
 
     </div>
     
